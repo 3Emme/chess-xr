@@ -45,7 +45,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * Write initial README, begin study of WebXR
 * Watching recorded WebXR workshop videos via https://yonet.gitbook.io/mixed-reality-docs/-MHmDWJS71Z0_jhk69k4/webxr-lessons
 * Going through resources via https://www.meetup.com/hololens-mr/events/274996620
-* 
+* watching https://www.twitch.tv/videos/820212477
 * 
 * 
 * 
