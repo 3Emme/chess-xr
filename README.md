@@ -43,7 +43,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 
 -12/11/2020-
 * Write initial README, begin study of WebXR
-* 
+* Watching recorded WebXR workshop videos via https://yonet.gitbook.io/mixed-reality-docs/-MHmDWJS71Z0_jhk69k4/webxr-lessons
 * 
 * 
 * 
