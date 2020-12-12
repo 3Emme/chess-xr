@@ -48,7 +48,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * watching https://www.twitch.tv/videos/820212477
 * still watching above
 * https://blog.dubenko.dev/react-xr/
-* 
+* https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content
 * 
 
 ## Setup/Installation Requirements
