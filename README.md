@@ -47,7 +47,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * Going through resources via https://www.meetup.com/hololens-mr/events/274996620
 * watching https://www.twitch.tv/videos/820212477
 * still watching above
-* 
+* https://blog.dubenko.dev/react-xr/
 * 
 * 
 
