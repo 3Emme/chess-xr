@@ -50,6 +50,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * https://blog.dubenko.dev/react-xr/
 * https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content
 * reverse engineering parts of this project to learn: https://codesandbox.io/s/yubi-pfdbw
+* https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/motion-controllers
 
 ## Setup/Installation Requirements
 
