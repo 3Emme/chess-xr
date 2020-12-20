@@ -51,6 +51,8 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content
 * reverse engineering parts of this project to learn: https://codesandbox.io/s/yubi-pfdbw
 * https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/motion-controllers
+* https://threejs.org/docs/
+* https://threejsfundamentals.org/
 
 ## Setup/Installation Requirements
 
