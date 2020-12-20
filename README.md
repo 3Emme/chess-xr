@@ -49,7 +49,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * still watching above
 * https://blog.dubenko.dev/react-xr/
 * https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content
-* 
+* reverse engineering parts of this project to learn: https://codesandbox.io/s/yubi-pfdbw
 
 ## Setup/Installation Requirements
 
