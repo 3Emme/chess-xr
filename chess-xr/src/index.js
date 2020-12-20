@@ -38,13 +38,13 @@ const App = () => {
 
       <OrbitControls />
 
-      {/* <Hover onChange={setIsHovered}>
+      <Hover onChange={setIsHovered}>
         <Box position={[0, 0.8, -1]} scale={[0.3, 0.3, 0.3]}>
           <meshStandardMaterial color={color} />
         </Box>
-      </Hover> */}
-      <Chessboard position={[0, 0.8, -1]} scale={[0.3, 0.3, 0.3]}>
-      </Chessboard>
+      </Hover>
+      {/* <Chessboard position={[5, 0.8, -1]} scale={[0.3, 0.3, 0.3]}>
+      </Chessboard> */}
       <DefaultXRControllers />
     </VRCanvas>
   )

@@ -53,6 +53,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/motion-controllers
 * https://threejs.org/docs/
 * https://threejsfundamentals.org/
+* https://threejs.org/docs/#examples/en/loaders/GLTFLoader
 
 ## Setup/Installation Requirements
 
