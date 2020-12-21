@@ -25,7 +25,7 @@ function Knight(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/knight/model.gltf')
   return (
-    <group ref={group} {...props} dispose={null} position={[0.02, 1.26, -0.89]} scale={[0.5, 0.5, 0.5]} rotation={[0, -Math.PI / 2, 0]}>
+    <group ref={group} {...props} dispose={null} scale={[0.5, 0.5, 0.5]} rotation={[0, -Math.PI / 2, 0]}>
       <mesh material={materials.BlocksPaper} geometry={nodes['node_MeshObject-1328424064-PolyPaper23'].geometry} />
     </group>
   )
@@ -50,7 +50,23 @@ const App = () => {
 
       <Suspense fallback={null}>
         <Chessboard />
-        <Knight />
+        <Knight position={[-0.06, 1.26, -0.89]}/>
+        <Knight position={[0.02, 1.26, -0.89]}/>
+        <Knight position={[0.10, 1.26, -0.89]}/>
+        <Knight position={[0.18, 1.26, -0.89]}/>
+        <Knight position={[0.26, 1.26, -0.89]}/>
+        <Knight position={[0.34, 1.26, -0.89]}/>
+        <Knight position={[0.42, 1.26, -0.89]}/>
+        <Knight position={[0.50, 1.26, -0.89]}/>
+
+        <Knight position={[-0.06, 1.26, -0.81]}/>
+        <Knight position={[0.02, 1.26, -0.81]}/>
+        <Knight position={[0.10, 1.26, -0.81]}/>
+        <Knight position={[0.18, 1.26, -0.81]}/>
+        <Knight position={[0.26, 1.26, -0.81]}/>
+        <Knight position={[0.34, 1.26, -0.81]}/>
+        <Knight position={[0.42, 1.26, -0.81]}/>
+        <Knight position={[0.50, 1.26, -0.81]}/>
       </Suspense>
       <DefaultXRControllers />
     </VRCanvas>
