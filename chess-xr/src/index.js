@@ -36,7 +36,7 @@ function Chessboard(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/chessboard/model.gltf')
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} position={[-0.64, -0.50, -0.10]}>
       <mesh material={materials.BlocksPaper} geometry={nodes['node_MeshObject1316465664-PolyPaper21'].geometry} />
     </group>
   )
