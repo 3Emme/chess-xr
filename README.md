@@ -64,6 +64,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * https://forum.babylonjs.com/t/webxr-how-do-i-spin-a-mesh-around-a-point/14252/2
 * Continuing to read through the above
 * Continuing to read through the above
+* researching models
 
 ## Setup/Installation Requirements
 
