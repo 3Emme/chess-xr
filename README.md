@@ -60,6 +60,8 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * Continuing to read through the above
 * https://immersive-web.github.io/webxr-reference/webxr-device-api/devices.html
 * Continuing to read through the above
+* https://discourse.threejs.org/t/rotating-3d-object-in-webxr/15926
+* https://forum.babylonjs.com/t/webxr-how-do-i-spin-a-mesh-around-a-point/14252/2
 
 ## Setup/Installation Requirements
 
