@@ -59,6 +59,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * Continuing to read through the above
 * Continuing to read through the above
 * https://immersive-web.github.io/webxr-reference/webxr-device-api/devices.html
+* Continuing to read through the above
 
 ## Setup/Installation Requirements
 
