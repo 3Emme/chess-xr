@@ -25,7 +25,7 @@ function Knight(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/knight/model.gltf')
   return (
-    <group ref={group} {...props} dispose={null} position={[0.13, 1.25, -1.04]} scale={[0.5, 0.5, 0.5]}>
+    <group ref={group} {...props} dispose={null} position={[0.13, 1.25, -1.04]} scale={[0.5, 0.5, 0.5]} rotation={[0, -Math.PI / 2, 0]}>
       <mesh material={materials.BlocksPaper} geometry={nodes['node_MeshObject-1328424064-PolyPaper23'].geometry} />
     </group>
   )
