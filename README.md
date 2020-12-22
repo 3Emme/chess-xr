@@ -66,6 +66,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * Continuing to read through the above
 * researching models
 * using https://blog.logrocket.com/3d-rendering-in-the-browser-with-react-three-fiber/ to look into physics
+*Continuing to read through the above
 
 ## Setup/Installation Requirements
 
