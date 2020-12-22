@@ -37,7 +37,8 @@ function Chessboard(props) {
 
   return (
     <group ref={group} {...props} dispose={null} position={[0, 0.60, -0.54]}>
-      <mesh ref={ref} material={materials.BlocksPaper} geometry={nodes['node_MeshObject1316465664-PolyPaper21'].geometry} />
+      <mesh ref={ref} material={materials.BlocksPaper} geometry={nodes['node_MeshObject1316465664-PolyPaper21'].geometry}>
+      </mesh>
     </group>
   )
 }
