@@ -68,6 +68,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * using https://blog.logrocket.com/3d-rendering-in-the-browser-with-react-three-fiber/ to look into physics
 * Continuing to read through the above
 * Continuing to read through the above
+* reading through Poimandres discord (discord for many of the technologies used thus far) for insight
 
 ## Setup/Installation Requirements
 
