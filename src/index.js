@@ -11,30 +11,17 @@ import { Physics, useSphere, useBox, usePlane } from 'use-cannon'
 import './styles.css'
 
 function Env() {
-  // const args = [5, 1, 5]
-  // const [ref] = useBox(() => ({
-  //   args,
-  //   mass: 0
-  // }))
+  const args = [5, 1, 5]
+  const [ref] = useBox(() => ({
+    args,
+    mass: 0
+  }))
 
-  // return (
-  //   <Box ref={ref} args={args}>
-  //     <meshStandardMaterial color="#666" attach="material" />
-  //   </Box>
-  // )
-  let geom = new THREE.PlaneGeometry(5, 5);
-  const [ref] = usePlane(() => ({
-    args: geom,
-    position: [5, 1, 5]
-  }));
   return (
-    <mesh
-      ref={ref}
-      material={new THREE.MeshPhongMaterial({ color: "#222" })}
-      geometry={geom}
-      rotation={[0, 10, 0]}
-    />
-  );
+    <Box ref={ref} args={args}>
+      <meshStandardMaterial color="#666" attach="material" />
+    </Box>
+  )
 }
 
 /*
