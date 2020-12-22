@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import * as THREE from "three";
 import ReactDOM from 'react-dom'
 import React, { Suspense, useState, useRef } from 'react'
-import { OrbitControls, Box } from 'drei'
+import { OrbitControls, Box, Sky, Stars } from 'drei'
 import { useGLTF } from '@react-three/drei/useGLTF'
 import { VRCanvas, DefaultXRControllers, Hover, Select } from 'react-xr'
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon'
@@ -71,6 +71,20 @@ const App = () => {
         }}>
       <ambientLight />
       <spotLight />
+      <Sky
+        distance={450000} // Camera distance (default=450000)
+        sunPosition={[0, 1, 0]} // Sun position normal (defaults to inclination and azimuth if not set)
+        inclination={0} // Sun elevation angle from 0 to 1 (default=0)
+        azimuth={0.25} // Sun rotation around the Y axis from 0 to 1 (default=0.25)
+      />
+      <Stars
+        radius={100} // Radius of the inner sphere (default=100)
+        depth={50} // Depth of area where stars should fit (default=50)
+        count={5000} // Amount of stars (default=5000)
+        factor={4} // Size factor (default=4)
+        saturation={0.5} // Saturation 0-1 (default=0)
+        fade // Faded dots (default=false)
+      />
 
       <OrbitControls />
 

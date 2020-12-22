@@ -69,6 +69,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * Continuing to read through the above
 * Continuing to read through the above
 * reading through Poimandres discord (discord for many of the technologies used thus far) for insight
+* https://codesandbox.io/s/r3f-cannon-instanced-physics-devf8 (looked into and confirmed that async gltf loading isn't an issue as the physics here work with a suspense as a child of the physics component)
 
 ## Setup/Installation Requirements
 
