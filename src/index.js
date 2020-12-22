@@ -1,26 +1,40 @@
 import { useLoader, Canvas, useFrame } from "react-three-fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import * as THREE from "three";
 import ReactDOM from 'react-dom'
 import React, { Suspense, useState, useRef } from 'react'
 import { OrbitControls, Box } from 'drei'
 import { useGLTF } from '@react-three/drei/useGLTF'
 import { VRCanvas, DefaultXRControllers, Hover, Select } from 'react-xr'
-import { Physics, useSphere, useBox } from 'use-cannon'
+import { Physics, useSphere, useBox, usePlane } from 'use-cannon'
 // import Chessboard from './Chessboard'
 import './styles.css'
 
 function Env() {
-  const args = [5, 1, 5]
-  const [ref] = useBox(() => ({
-    args,
-    mass: 0
-  }))
+  // const args = [5, 1, 5]
+  // const [ref] = useBox(() => ({
+  //   args,
+  //   mass: 0
+  // }))
 
+  // return (
+  //   <Box ref={ref} args={args}>
+  //     <meshStandardMaterial color="#666" attach="material" />
+  //   </Box>
+  // )
+  let geom = new THREE.PlaneGeometry(5, 5);
+  const [ref] = usePlane(() => ({
+    args: geom,
+    position: [5, 1, 5]
+  }));
   return (
-    <Box ref={ref} args={args}>
-      <meshStandardMaterial color="#666" attach="material" />
-    </Box>
-  )
+    <mesh
+      ref={ref}
+      material={new THREE.MeshPhongMaterial({ color: "#222" })}
+      geometry={geom}
+      rotation={[0, 10, 0]}
+    />
+  );
 }
 
 /*
