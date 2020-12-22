@@ -51,23 +51,23 @@ const App = () => {
       <Suspense fallback={null}>
         <Chessboard />
         <Select onSelect={() => console.log('mesh has been selected')}>
-          <Knight position={[-0.06, 1.40, -0.89]}/>
-          <Knight position={[0.02, 1.40, -0.89]}/>
-          <Knight position={[0.10, 1.40, -0.89]}/>
-          <Knight position={[0.18, 1.40, -0.89]}/>
-          <Knight position={[0.26, 1.40, -0.89]}/>
-          <Knight position={[0.34, 1.40, -0.89]}/>
-          <Knight position={[0.42, 1.40, -0.89]}/>
-          <Knight position={[0.50, 1.40, -0.89]}/>
+          <Knight position={[-0.28, 1.42, -0.82]}/>
+          <Knight position={[-0.20, 1.42, -0.82]}/>
+          <Knight position={[-0.12, 1.42, -0.82]}/>
+          <Knight position={[-0.04, 1.42, -0.82]}/>
+          <Knight position={[0.04, 1.42, -0.82]}/>
+          <Knight position={[0.12, 1.42, -0.82]}/>
+          <Knight position={[0.20, 1.42, -0.82]}/>
+          <Knight position={[0.28, 1.42, -0.82]}/>
 
-          <Knight position={[-0.06, 1.40, -0.81]}/>
-          <Knight position={[0.02, 1.40, -0.81]}/>
-          <Knight position={[0.10, 1.40, -0.81]}/>
-          <Knight position={[0.18, 1.40, -0.81]}/>
-          <Knight position={[0.26, 1.40, -0.81]}/>
-          <Knight position={[0.34, 1.40, -0.81]}/>
-          <Knight position={[0.42, 1.40, -0.81]}/>
-          <Knight position={[0.50, 1.40, -0.81]}/>
+          <Knight position={[-0.28, 1.42, -0.74]}/>
+          <Knight position={[-0.20, 1.42, -0.74]}/>
+          <Knight position={[-0.12, 1.42, -0.74]}/>
+          <Knight position={[-0.04, 1.42, -0.74]}/>
+          <Knight position={[0.04, 1.42, -0.74]}/>
+          <Knight position={[0.12, 1.42, -0.74]}/>
+          <Knight position={[0.20, 1.42, -0.74]}/>
+          <Knight position={[0.28, 1.42, -0.74]}/>
         </Select>
       </Suspense>
       <DefaultXRControllers />
