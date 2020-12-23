@@ -180,7 +180,7 @@ const App = () => {
         iterations={20}
         tolerance={0.0001}
         defaultContactMaterial={{
-          friction: 0.003
+          friction: 5
         }}
       >
         <Hands />
