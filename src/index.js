@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import * as THREE from "three";
 import ReactDOM from 'react-dom'
 import React, { Suspense, useState, useRef } from 'react'
-import { OrbitControls, Box, Sky, Stars } from 'drei'
+import { OrbitControls, Box, Sky, Stars, PerspectiveCamera } from 'drei'
 import { useGLTF } from '@react-three/drei/useGLTF'
 import { VRCanvas, DefaultXRControllers, Hover, Select } from 'react-xr'
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon'
@@ -96,7 +96,13 @@ const App = () => {
 
   return (
     <VRCanvas colorManagement>
-      <fog args={['#000', 2, 20]} attach="fog" />
+      <PerspectiveCamera
+        makeDefault // Registers it as the default camera system-wide (default=false)
+        position={[2,4,6]} // All THREE.PerspectiveCamera props are valid
+      >
+        {/* <mesh /> */}
+      </PerspectiveCamera>
+      <fog args={['#000', 2, 30]} attach="fog" />
       <Physics
         gravity={[0, -6, 0]}
         iterations={20}
@@ -136,16 +142,16 @@ const App = () => {
             <Env />
             <Chessboard />
             <Select onSelect={() => console.log('mesh has been selected')}>
-              <Knight position={[-0.65, 0.99, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              {/* <Knight position={[-0.20, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.12, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.04, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.04, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.12, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.20, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.28, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.65, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.465, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.275, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.085, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.105, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.295, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.485, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.645, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
 
-              <Knight position={[-0.28, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
+              {/* <Knight position={[-0.28, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
               <Knight position={[-0.20, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
               <Knight position={[-0.12, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
               <Knight position={[-0.04, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
