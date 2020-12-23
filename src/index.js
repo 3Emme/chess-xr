@@ -1,11 +1,11 @@
-import { useLoader, Canvas, useFrame } from "react-three-fiber"
+import { useLoader, Canvas, useFrame, useThree } from "react-three-fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import * as THREE from "three";
 import ReactDOM from 'react-dom'
-import React, { Suspense, useState, useRef } from 'react'
-import { OrbitControls, Box, Sky, Stars, PerspectiveCamera } from 'drei'
+import React, { Suspense, useState, useEffect, Fragment } from 'react'
+import { OrbitControls, Plane, Sphere, useMatcapTexture, Box, Sky, Stars, PerspectiveCamera } from 'drei'
 import { useGLTF } from '@react-three/drei/useGLTF'
-import { VRCanvas, DefaultXRControllers, Hover, Select } from 'react-xr'
+import { VRCanvas, DefaultXRControllers, Hover, Select, Hands } from 'react-xr'
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon'
 // import Chessboard from './Chessboard'
 import './styles.css'
@@ -89,6 +89,78 @@ function Knight({ position, rotation, ...props }) {
 //     </group>
 //   );
 // }
+//////////////////////////
+function JointCollider({ index, hand }) {
+  const { gl } = useThree()
+  const handObj = (gl.xr).getHand(hand)
+  const joint = handObj.joints[index]
+  const size = joint.jointRadius ?? 0.001
+  const [tipRef, api] = useSphere(() => ({ args: size, position: [-1000, 0, 0] }))
+  useFrame(() => {
+    if (joint === undefined) return
+    api.position.set(joint.position.x, joint.position.y, joint.position.z)
+  })
+
+  return (
+    <Sphere ref={tipRef} args={[size]}>
+      <meshBasicMaterial transparent opacity={0} attach="material" />
+    </Sphere>
+  )
+}
+
+function HandsReady(props) {
+  const [ready, setReady] = useState(false)
+  const { gl } = useThree()
+  useEffect(() => {
+    if (ready) return
+    const joint = (gl.xr).getHand(0).joints[4]
+    if (joint?.jointRadius !== undefined) return
+    const id = setInterval(() => {
+      if (joint?.jointRadius !== undefined) {
+        setReady(true)
+      }
+    }, 500)
+    return () => clearInterval(id)
+  }, [gl, ready])
+
+  return ready ? props.children : null
+}
+
+const HandsColliders = () =>
+  [...Array(25)].map((_, i) => (
+    <Fragment key={i}>
+      <JointCollider index={i} hand={0} />
+      <JointCollider index={i} hand={1} />
+    </Fragment>
+  ))
+
+// function Scene() {
+//   const [floorRef] = usePlane(() => ({
+//     args: [10, 10],
+//     rotation: [-Math.PI / 2, 0, 0],
+//     position: [0, 1, 0],
+//     type: 'Static'
+//   }))
+//   return (
+//     <>
+//       <Sky />
+//       <Plane ref={floorRef} args={[10, 10]} receiveShadow>
+//         <meshStandardMaterial attach="material" color="#fff" />
+//       </Plane>
+//       <Hands />
+//       <HandsReady>
+//         <HandsColliders />
+//       </HandsReady>
+//       {[...Array(7)].map((_, i) => (
+//         <Cube position={[0, 1.1 + 0.1 * i, -0.5]} />
+//       ))}
+//       <OrbitControls />
+//       <ambientLight intensity={0.5} />
+//       <spotLight position={[1, 8, 1]} angle={0.3} penumbra={1} intensity={1} castShadow />
+//     </>
+//   )
+// }
+//////////////////////////
 
 const App = () => {
   // const [isHovered, setIsHovered] = useState(false)
@@ -111,6 +183,10 @@ const App = () => {
           friction: 0.003
         }}
       >
+        <Hands />
+        <HandsReady>
+          <HandsColliders />
+        </HandsReady>
         <ambientLight />
         <spotLight position={[0,1.5,0]}/>
         <Sky
