@@ -71,6 +71,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * reading through Poimandres discord (discord for many of the technologies used thus far) for insight
 * https://codesandbox.io/s/r3f-cannon-instanced-physics-devf8 (looked into and confirmed that async gltf loading isn't an issue as the physics here work with a suspense as a child of the physics component)
 * returning to https://blog.logrocket.com/3d-rendering-in-the-browser-with-react-three-fiber/
+* corresponding with developer from react-three discord re: physics fix
 
 ## Setup/Installation Requirements
 

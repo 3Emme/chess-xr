@@ -39,8 +39,10 @@ function Chessboard(props) {
 
   useFrame(state => {
     const time = state.clock.getElapsedTime();
-    group.current.position.y = group.current.position.y + Math.sin(time*2)/100;
-    group.current.rotation.y = group.current.rotation.x += 0.01;
+    if (5) {
+      group.current.position.y = group.current.position.y;
+      group.current.rotation.y = group.current.rotation.x;
+    }
   })
 
   return (
