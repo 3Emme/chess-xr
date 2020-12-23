@@ -112,7 +112,7 @@ const App = () => {
         }}
       >
         <ambientLight />
-        <spotLight />
+        <spotLight position={[0,1.5,0]}/>
         <Sky
           distance={450000} // Camera distance (default=450000)
           sunPosition={[0, 1, 0]} // Sun position normal (defaults to inclination and azimuth if not set)
@@ -142,41 +142,41 @@ const App = () => {
             <Env />
             <Chessboard />
             <Select onSelect={() => console.log('mesh has been selected')}>
-              <Knight position={[-0.65, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.465, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.275, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.085, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.105, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.295, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.485, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.645, 0.69, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.65, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.465, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.275, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.085, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.095, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.280, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.465, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.645, 0.83, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
 
-              {/* <Knight position={[-0.28, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.20, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.12, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.04, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.04, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.12, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.20, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[0.28, 1.74, -0.74]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.65, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.465, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.275, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.085, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.095, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.280, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.465, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[0.645, 0.83, -1.00]} rotation={[0, -Math.PI / 2, 0]}/>
 
-              <Knight position={[-0.28, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[-0.20, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[-0.12, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[-0.04, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.04, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.12, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.20, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.28, 1.74, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              {/* <Knight position={[-0.65, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[-0.465, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[-0.275, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[-0.085, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.095, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.280, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.465, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.645, 0.83, -0.26]} rotation={[0, Math.PI / 2, 0]}/>
 
-              <Knight position={[-0.28, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[-0.20, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[-0.12, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[-0.04, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.04, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.12, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.20, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.28, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/> */}
+              <Knight position={[-0.65, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[-0.465, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[-0.275, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[-0.085, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.095, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.280, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.465, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.645, 0.83, -0.34]} rotation={[0, Math.PI / 2, 0]}/> */}
 
               {/* <KnightBox position={[0.40, 3.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
               <KnightBox position={[0.40, 3.00, -0.34]} rotation={[0, Math.PI / 2, 0]}/> */}
