@@ -2,7 +2,7 @@ import { useLoader, Canvas, useFrame, useThree } from "react-three-fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import * as THREE from "three";
 import ReactDOM from 'react-dom'
-import React, { Suspense, useState, useEffect, Fragment } from 'react'
+import React, { Suspense, useState, useCallback, useEffect, Fragment } from 'react'
 import { OrbitControls, Plane, Sphere, useMatcapTexture, Box, Sky, Stars, PerspectiveCamera } from 'drei'
 import { useGLTF } from '@react-three/drei/useGLTF'
 import { VRCanvas, DefaultXRControllers, Hover, Select, Hands } from 'react-xr'
@@ -63,13 +63,33 @@ function Knight({ position, rotation, ...props }) {
   const args = [ .13, .28, .13]
   const { nodes, materials } = useGLTF('/knight/chessKnight.gltf');
   const [ref] = useBox(() => ({ args: args, mass: 0.5, position }));
+
+/////////////
+  useFrame(state => {
+    // const time = state.clock.getElapsedTime();
+    const { controllers } = useThree()
+      ref.current.position.y = ref.current.position.y + controllers.current.position.y;
+      ref.current.rotation.y = ref.current.rotation.x;
+    
+  })
+
+  // const [hover, setHover] = useState(false)
+  // const [color, setColor] = useState(0x123456)
+
+  // const onSelect = useCallback(() => {
+  //   setColor((Math.random() * 0xffffff) | 0)
+  // }, [setColor])
+  ///////////
+
   return (
     <group ref={ref} {...props} dispose={null} scale={[ 1, 1, 1 ]}>
-      <mesh  
-        material={materials.BlocksPaper} 
-        geometry={nodes['node_MeshObject-1328424064-PolyPaper23'].geometry}
-        rotation={rotation} 
-      />
+      <Select onSelect={useFrame}>
+        <mesh  
+          material={materials.BlocksPaper} 
+          geometry={nodes['node_MeshObject-1328424064-PolyPaper23'].geometry}
+          rotation={rotation} 
+        />
+      </Select>
       <Box args={args}>
       <meshBasicMaterial color="blue" transparent opacity={0.1} />
       </Box>
