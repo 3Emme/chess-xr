@@ -1,12 +1,10 @@
-import { useLoader, Canvas, useFrame, useThree } from "react-three-fiber"
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import * as THREE from "three";
+import { useFrame, useThree } from "react-three-fiber"
 import ReactDOM from 'react-dom'
-import React, { Suspense, useState, useCallback, useEffect, Fragment } from 'react'
-import { OrbitControls, Plane, Sphere, useMatcapTexture, Box, Sky, Stars, PerspectiveCamera } from 'drei'
+import React, { Suspense, useState, useEffect, Fragment } from 'react'
+import { OrbitControls, Sphere, Box, Sky, Stars, PerspectiveCamera } from 'drei'
 import { useGLTF } from '@react-three/drei/useGLTF'
-import { VRCanvas, DefaultXRControllers, Hover, Select, Hands } from 'react-xr'
-import { Physics, useSphere, useBox, usePlane } from 'use-cannon'
+import { VRCanvas, DefaultXRControllers, Select, Hands } from 'react-xr'
+import { Physics, useSphere, useBox } from 'use-cannon'
 import './styles.css'
 
 function Env() {
