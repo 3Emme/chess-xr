@@ -73,6 +73,7 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 * returning to https://blog.logrocket.com/3d-rendering-in-the-browser-with-react-three-fiber/
 * corresponding with developer from react-three discord re: physics fix
 * looking to https://codesandbox.io/s/react-xr-simple-demo-8i9ro?file=/src/index.tsx for insp on selection/reposition
+* Continuing to read through the above
 
 ## Setup/Installation Requirements
 
