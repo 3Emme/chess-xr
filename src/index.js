@@ -136,8 +136,8 @@ const App = () => {
             <Env />
             <Chessboard />
             <Select onSelect={() => console.log('mesh has been selected')}>
-              <Knight position={[-0.28, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
-              <Knight position={[-0.20, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
+              <Knight position={[-0.65, 0.99, -1.19]} rotation={[0, -Math.PI / 2, 0]}/>
+              {/* <Knight position={[-0.20, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
               <Knight position={[-0.12, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
               <Knight position={[-0.04, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
               <Knight position={[0.04, 1.74, -0.82]} rotation={[0, -Math.PI / 2, 0]}/>
@@ -170,7 +170,7 @@ const App = () => {
               <Knight position={[0.04, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
               <Knight position={[0.12, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
               <Knight position={[0.20, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
-              <Knight position={[0.28, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
+              <Knight position={[0.28, 1.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/> */}
 
               {/* <KnightBox position={[0.40, 3.74, -0.34]} rotation={[0, Math.PI / 2, 0]}/>
               <KnightBox position={[0.40, 3.00, -0.34]} rotation={[0, Math.PI / 2, 0]}/> */}
